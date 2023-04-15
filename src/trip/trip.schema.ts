@@ -22,11 +22,9 @@ export class Trip{
     @Prop()
     name: string;
 
-    @Prop()
-    day: string;
+    @Prop([Object])
+    days: object[];
 
-    @Prop([String])
-    favoriteActivitys: string[]
 }
 
 export const TripSchema = SchemaFactory.createForClass(Trip);

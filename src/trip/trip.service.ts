@@ -15,12 +15,11 @@ export class TripService {
         return this.tripRepository.find({});
     }
 
-    async createTrip(name: string, day: string): Promise<Trip> {
+    async createTrip(name: string, days: []) {
         return this.tripRepository.create({
             tripId: randomUUID(),
             name,
-            day,
-            favoriteActivitys: []
+            days
         })
     }
 

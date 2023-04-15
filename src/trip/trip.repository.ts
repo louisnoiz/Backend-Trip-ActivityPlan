@@ -15,7 +15,7 @@ export class TripRepository {
         return this.tripModel.find(tripFilterQuery);
     }
 
-    async create(trip: Trip): Promise<Trip>{
+    async create(trip: any){
         const newTrip = new this.tripModel(trip);
         return newTrip.save()
     }

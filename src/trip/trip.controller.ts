@@ -18,8 +18,8 @@ export class TripController {
   }
 
   @Post()
-  async createTrip(@Body() createTripDto: CreateTripDto): Promise<Trip> {
-      return this.tripService.createTrip(createTripDto.name, createTripDto.day)
+  async createTrip(@Body() createTripDto: any) {
+      return this.tripService.createTrip(createTripDto.name, createTripDto.days)
   }
 
 //   @Patch(':tripId')
